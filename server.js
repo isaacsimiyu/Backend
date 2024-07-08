@@ -264,7 +264,7 @@ const sendThankYouEmail = (name, email) => {
     service: "gmail",
     auth: {
       user: "tommboyaunicu@gmail.com",
-      pass: "lxdfhdskpbvjquzg",
+      pass: "phyxvlhpzjymbrtr",
     },
   });
 
