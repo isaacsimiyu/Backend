@@ -1,10 +1,10 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "A simple Node.js application",
   "main": "server,js",
   "scripts": {
-    "build": "npm install",
+    "build": "npm cahe clean --force && npm install",
     "satrt": "node server.js"
   },
   "keywords": [],
@@ -14,7 +14,7 @@
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
-    "express": "^4.18.2",
+    "express": "^4.17.1",
     "morgan": "^1.10.0",
     "mssql": "^10.0.1",
     "mysql": "^2.18.1",
@@ -24,6 +24,7 @@
     
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": "16.x",
+    "npm": "7.x"
   }
 }
