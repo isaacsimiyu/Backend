@@ -4,7 +4,7 @@
   "description": "",
   "main": "server,js",
   "scripts": {
-    
+    "build": "npm install",
     "satrt": "node server.js"
   },
   "keywords": [],
@@ -22,5 +22,8 @@
     "sequelize": "^6.33.0",
     "sequelize-cli": "^6.6.1"
     
+  },
+  "engines": {
+    "node": ">=14.0.0"
   }
 }

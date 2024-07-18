@@ -7,7 +7,8 @@ const router = express.Router();
 const bcrypt = require("bcrypt"); // Import bcrypt
 
 const app = express();
-const PORT = 3500;
+
+const PORT = process.env.PORT || 3000;
 
 app.use(
   cors({
