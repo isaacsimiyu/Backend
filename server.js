@@ -10,21 +10,23 @@ const app = express();
 
 const PORT = process.env.PORT || 3000;
 
-app.use(
-  cors({
-    origin: "http://localhost:3000",
-    credentials: true,
-  })
-);
+// CORS configuration
+const corsOptions = {
+  origin: "https://tmucuweb.vercel.app", // Replace with your frontend URL
+  credentials: true,
+};
+app.use(cors(corsOptions));
+app.use(bodyParser.json());
 
 // Create a MySQL connection
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  port: "3306",
-  database: "tmucuwebsite",
+  host:process.env.DB_HOST || "localhost",
+  user: process.env.DB_USER || "root",
+  password: process.env.DB_PASSWORD || "",
+  port: process.env.DB_PORT ||  "3306",
+  database: process.env.DB_NAME || "tmucuwebsite",
 });
+
 
 db.query(
   `
